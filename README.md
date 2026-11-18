@@ -3,8 +3,7 @@
 [![Latest release](https://img.shields.io/github/v/release/ryusei-inamori/FusedMaker)](https://github.com/ryusei-inamori/FusedMaker/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/ryusei-inamori/FusedMaker/total?label=downloads)](https://github.com/ryusei-inamori/FusedMaker/releases)
 [![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/license-PolyForm%20Noncommercial%201.0.0-blue)](LICENSE)
-<!-- After the first release, add the Zenodo DOI badge here, e.g.
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24337768.svg)](https://doi.org/10.5281/zenodo.24337768) -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24337767.svg)](https://doi.org/10.5281/zenodo.24337767)
 
 **日本語** | [English](#english)
 
@@ -37,9 +36,14 @@
 
 ## 引用のお願い
 
-研究成果の発表（論文・学会発表など）に使用した場合は、本ソフトウェアを引用してください。引用情報は GitHub の「Cite this repository」ボタン、または Zenodo のページ（DOI）から取得できます。
+研究成果の発表（論文・学会発表など）に使用した場合は、本ソフトウェアを引用してください。
 
-> Inamori R. Fused Maker (FusedAuto) [Software]. Zenodo. https://doi.org/（DOI）
+> Inamori, R. (2026). *Fused Maker (FusedAuto): a tool for summing and averaging repeated CT series* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24337767
+
+- 上の DOI（10.5281/zenodo.24337767）は全バージョン共通で、常に最新版を指します。
+- 使用したバージョンを正確に示したい場合は、[Zenodo のページ](https://doi.org/10.5281/zenodo.24337767)で各バージョンの DOI を確認してください（例：v2.0.0 は 10.5281/zenodo.24337768）。
+- GitHub の「Cite this repository」ボタンから、APA / BibTeX 形式の引用文を取得できます。
+- Zenodo には各リリースのソースコードが保存されています。実行ファイル（exe）は GitHub の Releases から入手してください。
 
 ## ソースからの実行・ビルド
 
@@ -73,7 +77,11 @@ Download `FusedAuto.exe` from [**Releases**](https://github.com/ryusei-inamori/F
 
 ### How to cite
 
-If you use this software in published research, please cite it. Use the "Cite this repository" button on GitHub or the Zenodo record (DOI).
+If you use this software in published research, please cite it:
+
+> Inamori, R. (2026). *Fused Maker (FusedAuto): a tool for summing and averaging repeated CT series* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24337767
+
+The DOI above (10.5281/zenodo.24337767) covers all versions and always resolves to the latest one. To cite the exact version you used, take its version DOI from the [Zenodo record](https://doi.org/10.5281/zenodo.24337767) (e.g. v2.0.0: 10.5281/zenodo.24337768). The "Cite this repository" button on GitHub gives APA / BibTeX formats. Zenodo archives the source code of each release; the executable is distributed on GitHub Releases.
 
 ### Build from source
 

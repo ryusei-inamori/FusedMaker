@@ -11,8 +11,17 @@ authors:
   - family-names: Inamori
     given-names: Ryusei
     email: mdai.inamori@gmail.com
-version: 2.0.0
+version: 2.0.1
+doi: 10.5281/zenodo.24337767
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24337767
+    description: Concept DOI (all versions, resolves to the latest)
+  - type: doi
+    value: 10.5281/zenodo.24337768
+    description: Version 2.0.0
 license: PolyForm-Noncommercial-1.0.0
+date-released: 2026-11-18
 repository-code: "https://github.com/ryusei-inamori/FusedMaker"
 url: "https://github.com/ryusei-inamori/FusedMaker"
 keywords:

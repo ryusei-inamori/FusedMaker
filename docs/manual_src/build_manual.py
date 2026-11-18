@@ -8,7 +8,7 @@ import sys
 HERE = pathlib.Path(__file__).resolve().parent
 OUT = HERE / "out"
 OUT.mkdir(exist_ok=True)
-VERSION = "2.0.0"
+VERSION = "2.0.1"
 DATE = {"ja": "2026年11月", "en": "November 2026"}
 
 
@@ -197,7 +197,7 @@ JA = f"""
 </ul>
 <h3>引用のお願い</h3>
 <p>研究成果の発表（論文・学会発表など）に使用した場合は、本ソフトウェアを引用してください。引用情報は GitHub（https://github.com/ryusei-inamori/FusedMaker）の「Cite this repository」または Zenodo の DOI ページから取得できます。</p>
-<div class="note">例：Inamori R. Fused Maker (FusedAuto), version 2.0.0 [Software]. Zenodo. https://doi.org/（DOI）</div>
+<div class="note">例：Inamori, R. (2026). Fused Maker (FusedAuto): a tool for summing and averaging repeated CT series [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24337767<br>（この DOI は全バージョン共通です。使用したバージョンの DOI は Zenodo のページで確認できます。）</div>
 <h3>免責事項</h3>
 <div class="warn">本ソフトウェアは研究・教育目的のツールです。医療機器ではなく、診断・治療その他の臨床判断には使用できません。
 作成される画像は元画像を加算・平均した派生画像であり、CT値（HU）は元画像と同じ意味を持ちません（特に加算）。
@@ -345,7 +345,7 @@ It is taken from the largest group of checked series that match each other. A si
 </ul>
 <h3>How to cite</h3>
 <p>If you use this software in published research (papers, conference presentations, …), please cite it. Citation information is available from “Cite this repository” on GitHub (https://github.com/ryusei-inamori/FusedMaker) or from the Zenodo DOI page.</p>
-<div class="note">Example: Inamori R. Fused Maker (FusedAuto), version 2.0.0 [Software]. Zenodo. https://doi.org/(DOI)</div>
+<div class="note">Example: Inamori, R. (2026). Fused Maker (FusedAuto): a tool for summing and averaging repeated CT series [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24337767<br>(This DOI covers all versions; the DOI of each version is listed on the Zenodo page.)</div>
 <h3>Disclaimer</h3>
 <div class="warn">This software is a research and education tool. It is not a medical device and must not be used for diagnosis,
 treatment or any other clinical decision. Output images are derived images (sums/averages of the originals); their CT numbers

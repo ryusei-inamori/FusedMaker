@@ -29,11 +29,11 @@ from pydicom.dataset import Dataset, FileMetaDataset
 from pydicom.uid import ExplicitVRLittleEndian, generate_uid
 
 APP_NAME = "FusedAuto"
-APP_VERSION = "2.0.0"
+APP_VERSION = "2.0.1"
 APP_AUTHOR = "Ryusei Inamori"
 APP_CONTACT = "mdai.inamori@gmail.com"
 APP_URL = "https://github.com/ryusei-inamori/FusedMaker"
-APP_DOI = ""   # set to the Zenodo concept DOI (e.g. "10.5281/zenodo.1234567") once it exists
+APP_DOI = "10.5281/zenodo.24337767"   # set to the Zenodo concept DOI (e.g. "10.5281/zenodo.1234567") once it exists
 
 CT_IMAGE_STORAGE = "1.2.840.10008.5.1.4.1.1.2"
 MEDIA_STORAGE_DIRECTORY = "1.2.840.10008.1.3.10"
