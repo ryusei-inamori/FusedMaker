@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.venv-build/
+
+# Build output (the executable is published on GitHub Releases, not in the repo)
+build/
+dist/
+*.exe
+*.spec.bak
+
+# Local / private data - never commit DICOM images or patient data
+*.dcm
+_devtmp/
+_manual_sample/
+data/
+output/
+legacy/
+
+# OS / editors
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/

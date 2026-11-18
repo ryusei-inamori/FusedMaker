@@ -1,0 +1,55 @@
+# Builds FusedAuto.exe on Windows when a GitHub Release is published and attaches
+# the executable, the manuals, the license texts and SHA-256 checksums to the release.
+name: Build and attach release assets
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing release tag to (re)build, e.g. v2.0.0"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    env:
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TAG }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies (pinned)
+        run: python -m pip install -r requirements.txt
+
+      - name: Build single-file executable
+        run: python -m PyInstaller --noconfirm FusedAuto_onefile.spec
+
+      - name: Collect release files
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force upload | Out-Null
+          Copy-Item dist\FusedAuto.exe upload\
+          Copy-Item docs\FusedAuto_manual_ja.pdf, docs\FusedAuto_manual_en.pdf upload\
+          New-Item -ItemType Directory -Force lic | Out-Null
+          Copy-Item LICENSE, THIRD_PARTY_LICENSES.txt lic\
+          Copy-Item licenses\*.txt lic\
+          Compress-Archive -Path lic\* -DestinationPath upload\FusedAuto-licenses.zip -Force
+          Get-ChildItem upload -File | Get-FileHash -Algorithm SHA256 |
+            ForEach-Object { "{0}  {1}" -f $_.Hash.ToLower(), (Split-Path $_.Path -Leaf) } |
+            Set-Content -Encoding ascii upload\SHA256SUMS.txt
+          Get-Content upload\SHA256SUMS.txt
+
+      - name: Upload to the release
+        shell: pwsh
+        run: gh release upload "$env:TAG" (Get-ChildItem upload -File).FullName --clobber --repo "${{ github.repository }}"

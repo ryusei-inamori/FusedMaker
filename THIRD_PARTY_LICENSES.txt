@@ -1,0 +1,68 @@
+Fused Maker (FusedAuto) - Third-party software / サードパーティ ソフトウェア
+=========================================================================
+
+FusedAuto.exe bundles the following software. These components are NOT covered by the
+FusedAuto license (PolyForm Noncommercial 1.0.0); each remains under its own license, and
+nothing in the FusedAuto license restricts the rights those licenses give you.
+FusedAuto.exe には以下のソフトウェアが同梱されています。これらは FusedAuto 本体のライセンス
+（PolyForm Noncommercial 1.0.0）の対象外で、それぞれのライセンスが適用されます。
+
+License texts are in the "licenses" folder of the source repository and of the release
+(licenses/LGPL-3.0.txt, licenses/GPL-3.0.txt). In the application: Help > Licenses.
+ライセンス全文はリポジトリとリリースの licenses フォルダ、およびアプリの［ヘルプ］→［ライセンス］にあります。
+
+
+1. Qt for Python (PySide6 6.12.0, Shiboken6 6.12.0) and Qt 6.12
+---------------------------------------------------------------
+  License : GNU Lesser General Public License v3 (LGPL-3.0-only)
+            (full texts: licenses/LGPL-3.0.txt and licenses/GPL-3.0.txt, which LGPL v3 incorporates)
+  Copyright: The Qt Company Ltd. and other contributors
+  Used    : unmodified, from the official PyPI wheel "PySide6-Essentials==6.12.0"
+            (QtCore, QtGui, QtWidgets and their plugins)
+  Source  : https://code.qt.io/cgit/pyside/pyside-setup.git/  (tag v6.12.0)
+            https://download.qt.io/official_releases/qt/6.12/   (Qt 6.12 sources)
+            Qt's own third-party components (zlib, libpng, FreeType, HarfBuzz, etc.) are listed at
+            https://doc.qt.io/qt-6/licenses-used-in-qt.html
+
+  Written offer / ソースコード提供の申し出:
+    For at least three years after the last release of FusedAuto that contains these
+    libraries, the author will provide, on request and free of charge (or for the cost of
+    physically providing it), the complete corresponding source code of the Qt / Qt for
+    Python version used. Contact: Ryusei Inamori <mdai.inamori@gmail.com>
+    同梱した Qt / Qt for Python のソースコードは、最後のリリースから少なくとも 3 年間、
+    ご請求いただければ無償（媒体費用を除く）で提供します。連絡先は上記のとおりです。
+
+  Replacing / relinking Qt (LGPL v3 section 4(d)):
+    The complete source code of FusedAuto and the build scripts are published at
+    https://github.com/ryusei-inamori/FusedMaker . You may rebuild the application with a
+    modified or different version of Qt / Qt for Python (see README, "Build"). You are
+    permitted to modify the Qt portions and to reverse engineer FusedAuto for the purpose
+    of debugging such modifications.
+    FusedAuto のソースとビルド手順は上記で公開しており、別の Qt / Qt for Python で
+    ビルドし直すことができます。そのための改変・デバッグ目的のリバースエンジニアリングを妨げません。
+
+2. pydicom 3.0.2
+----------------
+  License : MIT License
+  Source  : https://github.com/pydicom/pydicom
+
+3. NumPy 2.5.5 (with bundled OpenBLAS)
+--------------------------------------
+  License : BSD 3-Clause License (OpenBLAS: BSD 3-Clause; bundled runtime libraries under
+            their respective permissive licenses / runtime exceptions)
+  Source  : https://github.com/numpy/numpy
+
+4. Python 3.12
+--------------
+  License : Python Software Foundation License Version 2
+  Source  : https://www.python.org/
+
+5. PyInstaller 6.22.3 bootloader
+--------------------------------
+  License : GPL v2 with a special exception that permits distribution of bundled
+            applications under any license.
+  Source  : https://github.com/pyinstaller/pyinstaller
+
+6. Microsoft Visual C++ runtime (VCRUNTIME140.dll, MSVCP140*.dll)
+-----------------------------------------------------------------
+  Redistributed as permitted by the Microsoft Visual C++ Redistributable license terms.

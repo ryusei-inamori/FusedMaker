@@ -1,0 +1,7 @@
+# Pinned versions used for the released executable (keep THIRD_PARTY_LICENSES.txt in sync)
+# Runtime
+PySide6-Essentials==6.12.0   # LGPL-3.0-only (QtCore/QtGui/QtWidgets)
+pydicom==3.0.2               # MIT
+numpy==2.5.5                 # BSD-3-Clause
+# Build
+pyinstaller==6.22.3          # GPL-2.0 with bootloader exception

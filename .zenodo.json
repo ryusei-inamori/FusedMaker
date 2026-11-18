@@ -1,0 +1,21 @@
+{
+  "upload_type": "software",
+  "title": "Fused Maker (FusedAuto): a tool for summing and averaging repeated CT series",
+  "creators": [
+    {
+      "name": "Inamori, Ryusei"
+    }
+  ],
+  "description": "<p>Fused Maker (FusedAuto) sums or averages CT series acquired repeatedly at the same position, slice by slice, and saves the result as a new DICOM series. Series whose frame of reference, slice positions, matrix or slice count do not match are excluded automatically.</p><p><b>For research and education use only. Not for clinical use.</b> Free for noncommercial use under the PolyForm Noncommercial License 1.0.0; please cite this record when you use the software in published research.</p><p>The Windows executable (FusedAuto.exe) and the user manuals (Japanese / English) are distributed on the GitHub Releases page: https://github.com/ryusei-inamori/FusedMaker/releases . This Zenodo record archives the source code of each release.</p>",
+  "license": "polyform-noncommercial-1.0.0",
+  "access_right": "open",
+  "keywords": [
+    "computed tomography",
+    "CT",
+    "DICOM",
+    "image averaging",
+    "noise reduction",
+    "phantom",
+    "medical physics"
+  ]
+}

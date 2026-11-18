@@ -1,0 +1,32 @@
+# Records the download counts of all release assets once a day and redraws the chart
+# (stats/downloads.csv, stats/downloads.svg). Run it manually from the Actions tab too.
+name: Download statistics
+
+on:
+  schedule:
+    - cron: "17 15 * * *"   # every day 15:17 UTC (00:17 JST)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Record download counts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: python .github/scripts/download_stats.py
+      - name: Commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stats
+          git diff --cached --quiet || git commit -m "Update download statistics"
+          git push
