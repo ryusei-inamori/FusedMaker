@@ -4,7 +4,7 @@
 [![Downloads](https://img.shields.io/github/downloads/ryusei-inamori/FusedMaker/total?label=downloads)](https://github.com/ryusei-inamori/FusedMaker/releases)
 [![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/license-PolyForm%20Noncommercial%201.0.0-blue)](LICENSE)
 <!-- After the first release, add the Zenodo DOI badge here, e.g.
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX) -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24337768.svg)](https://doi.org/10.5281/zenodo.24337768) -->
 
 **日本語** | [English](#english)
 
